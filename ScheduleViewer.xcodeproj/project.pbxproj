@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DC416071AA483C100A524F2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC416061AA483C100A524F2 /* Student.swift */; };
+		1DC4160D1AA4871700A524F2 /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC4160C1AA4871700A524F2 /* StudentListViewController.swift */; };
+		1DC4160F1AA4876300A524F2 /* StudentEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC4160E1AA4876300A524F2 /* StudentEditorViewController.swift */; };
+		1DC416111AA492A600A524F2 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC416101AA492A600A524F2 /* ScheduleViewController.swift */; };
 		B3634CD31A9E07C400D35A79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3634CD21A9E07C400D35A79 /* AppDelegate.swift */; };
 		B3634CD51A9E07C500D35A79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3634CD41A9E07C500D35A79 /* ViewController.swift */; };
 		B3634CD81A9E07C500D35A79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3634CD61A9E07C500D35A79 /* Main.storyboard */; };
@@ -26,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DC416061AA483C100A524F2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		1DC4160C1AA4871700A524F2 /* StudentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
+		1DC4160E1AA4876300A524F2 /* StudentEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentEditorViewController.swift; sourceTree = "<group>"; };
+		1DC416101AA492A600A524F2 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		B3634CCD1A9E07C400D35A79 /* ScheduleViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3634CD11A9E07C400D35A79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3634CD21A9E07C400D35A79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +88,10 @@
 				B3634CD21A9E07C400D35A79 /* AppDelegate.swift */,
 				B3634CD41A9E07C500D35A79 /* ViewController.swift */,
 				B3634CD61A9E07C500D35A79 /* Main.storyboard */,
+				1DC416101AA492A600A524F2 /* ScheduleViewController.swift */,
+				1DC416061AA483C100A524F2 /* Student.swift */,
+				1DC4160E1AA4876300A524F2 /* StudentEditorViewController.swift */,
+				1DC4160C1AA4871700A524F2 /* StudentListViewController.swift */,
 				B3634CD91A9E07C500D35A79 /* Images.xcassets */,
 				B3634CDB1A9E07C500D35A79 /* LaunchScreen.xib */,
 				B3634CD01A9E07C400D35A79 /* Supporting Files */,
@@ -212,8 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC4160D1AA4871700A524F2 /* StudentListViewController.swift in Sources */,
 				B3634CD51A9E07C500D35A79 /* ViewController.swift in Sources */,
+				1DC416071AA483C100A524F2 /* Student.swift in Sources */,
+				1DC416111AA492A600A524F2 /* ScheduleViewController.swift in Sources */,
 				B3634CD31A9E07C400D35A79 /* AppDelegate.swift in Sources */,
+				1DC4160F1AA4876300A524F2 /* StudentEditorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +423,7 @@
 				B3634CEE1A9E07C500D35A79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3634CEF1A9E07C500D35A79 /* Build configuration list for PBXNativeTarget "ScheduleViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +432,7 @@
 				B3634CF11A9E07C500D35A79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bAa-ra-82x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bAa-ra-82x">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -7,30 +7,42 @@
         <!--Students-->
         <scene sceneID="YWb-Ei-YAN">
             <objects>
-                <tableViewController id="Gvo-h7-qzC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="45f-UZ-Ewv">
+                <tableViewController id="Gvo-h7-qzC" customClass="StudentListViewController" customModule="ScheduleViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="45f-UZ-Ewv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection id="oJd-Qx-lB8">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DX2-mS-iFN">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DX2-mS-iFN" id="jDF-Uf-V4s">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="Student" id="DX2-mS-iFN">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DX2-mS-iFN" id="jDF-Uf-V4s">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vY-Si-Kvr">
+                                            <rect key="frame" x="48" y="11" width="111" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="f9r-6r-9It" kind="presentation" identifier="EditStudent" trigger="accessoryAction" id="jdA-HZ-4WZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="Gvo-h7-qzC" id="vQF-NZ-jIY"/>
                             <outlet property="delegate" destination="Gvo-h7-qzC" id="672-us-nz4"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Students" id="yTb-VK-2JY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RBK-n4-JCe"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="RBK-n4-JCe">
+                            <connections>
+                                <segue destination="f9r-6r-9It" kind="presentation" id="RLD-2R-gCQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="raY-K7-zKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -40,34 +52,57 @@
         <!--Add Schedule Owner-->
         <scene sceneID="q8b-ip-opn">
             <objects>
-                <tableViewController id="fCb-rH-BBF" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cpe-k4-4yN">
+                <tableViewController id="fCb-rH-BBF" customClass="StudentEditorViewController" customModule="ScheduleViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="cpe-k4-4yN" customClass="stude">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="f0l-a1-sbh">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f0l-a1-sbh" id="4ub-Cs-3Pe">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="KmH-1L-fXE">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="f0l-a1-sbh">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f0l-a1-sbh" id="4ub-Cs-3Pe">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qOt-On-aRB">
+                                                    <rect key="frame" x="8" y="8" width="584" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="fCb-rH-BBF" id="E6V-9m-h4L"/>
                             <outlet property="delegate" destination="fCb-rH-BBF" id="xAs-k2-j4N"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Schedule Owner" id="6ZO-F9-Tro">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Lgu-ax-1d8"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yXq-ec-ZPS"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Lgu-ax-1d8">
+                            <connections>
+                                <action selector="cancel:" destination="fCb-rH-BBF" id="Sw9-1D-Ogn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yXq-ec-ZPS">
+                            <connections>
+                                <action selector="done:" destination="fCb-rH-BBF" id="iD8-xE-1Cm"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneBarButton" destination="yXq-ec-ZPS" id="72T-L1-cuP"/>
+                        <outlet property="textField" destination="qOt-On-aRB" id="MEc-C3-Buk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IwJ-oh-oae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-45" y="802"/>
+            <point key="canvasLocation" x="-45" y="801"/>
         </scene>
-        <!--Item-->
+        <!--Saturday-->
         <scene sceneID="pFe-sW-S9G">
             <objects>
                 <tableViewController id="Ycs-L7-I2Q" sceneMemberID="viewController">
@@ -88,7 +123,7 @@
                             <outlet property="delegate" destination="Ycs-L7-I2Q" id="V3h-oJ-21y"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="JKm-lH-aGV"/>
+                    <tabBarItem key="tabBarItem" title="Saturday" id="JKm-lH-aGV"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6B3-Xf-JUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,7 +152,7 @@
             </objects>
             <point key="canvasLocation" x="1391" y="-28"/>
         </scene>
-        <!--Item-->
+        <!--Tuesday-->
         <scene sceneID="SZe-9K-B5p">
             <objects>
                 <tableViewController id="HR4-l4-WBl" sceneMemberID="viewController">
@@ -138,13 +173,13 @@
                             <outlet property="delegate" destination="HR4-l4-WBl" id="Yqe-iZ-3gz"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="xke-Jl-9ny"/>
+                    <tabBarItem key="tabBarItem" title="Tuesday" id="xke-Jl-9ny"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jib-X1-S2B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2375" y="-1102"/>
         </scene>
-        <!--Item-->
+        <!--Wednesday-->
         <scene sceneID="kXd-uY-laA">
             <objects>
                 <tableViewController id="lJc-8n-n4u" sceneMemberID="viewController">
@@ -165,13 +200,13 @@
                             <outlet property="delegate" destination="lJc-8n-n4u" id="p61-D7-zfC"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="iw3-CM-7dy"/>
+                    <tabBarItem key="tabBarItem" title="Wednesday" id="iw3-CM-7dy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jGL-Ce-bGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2375" y="-384"/>
         </scene>
-        <!--Item-->
+        <!--Friday-->
         <scene sceneID="e3E-9j-f2m">
             <objects>
                 <tableViewController id="YiJ-cS-RDx" sceneMemberID="viewController">
@@ -192,13 +227,13 @@
                             <outlet property="delegate" destination="YiJ-cS-RDx" id="ru4-hd-lcJ"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="BpE-gD-i6H"/>
+                    <tabBarItem key="tabBarItem" title="Friday" id="BpE-gD-i6H"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYc-C8-fgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2343" y="1156"/>
         </scene>
-        <!--Item-->
+        <!--Thursday-->
         <scene sceneID="zm9-ef-ZL5">
             <objects>
                 <tableViewController id="yCm-fN-1cu" sceneMemberID="viewController">
@@ -219,13 +254,13 @@
                             <outlet property="delegate" destination="yCm-fN-1cu" id="Kdv-ZC-Sdx"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="wdc-9N-vzr"/>
+                    <tabBarItem key="tabBarItem" title="Thursday" id="wdc-9N-vzr"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2OI-xJ-6OM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2343" y="332"/>
         </scene>
-        <!--Item-->
+        <!--Monday-->
         <scene sceneID="sz1-Sz-csJ">
             <objects>
                 <tableViewController id="EqN-ug-u4L" sceneMemberID="viewController">
@@ -246,7 +281,7 @@
                             <outlet property="delegate" destination="EqN-ug-u4L" id="9uR-bK-tal"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="29R-7y-egh"/>
+                    <tabBarItem key="tabBarItem" title="Monday" id="29R-7y-egh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eC4-G9-p9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -289,4 +324,7 @@
             <point key="canvasLocation" x="-857" y="802"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jdA-HZ-4WZ"/>
+    </inferredMetricsTieBreakers>
 </document>

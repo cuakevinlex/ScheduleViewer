@@ -1,26 +1,23 @@
 //
-//  Schedule.swift
+//  Time.swift
 //  ScheduleViewer
 //
-//  Created by Wilbert Uy Jr. on 3/4/15.
+//  Created by KevinCua on 3/8/15.
 //  Copyright (c) 2015 Ateneo de Manila University. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class Schedule : NSObject, NSCoding {
-    var name = ""
+class Time : NSObject, NSCoding {
     var time = ""
     //    var checked = false
     
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(name, forKey: "Name")
         aCoder.encodeObject(time, forKey: "Time")
         //        aCoder.encodeBool(checked, forKey: "Checked")
     }
     
     required init(coder aDecoder: NSCoder) {
-        name = aDecoder.decodeObjectForKey("Name") as String
         time = aDecoder.decodeObjectForKey("Time") as String
         //        checked =  aDecoder.decodeBoolForKey("Checked")
         super.init()
@@ -29,4 +26,8 @@ class Schedule : NSObject, NSCoding {
     override init() {
         super.init()
     }
+    
+    //    func toggleChecked() {
+    //        checked = !checked
+    //    }
 }

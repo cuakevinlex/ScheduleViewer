@@ -9,7 +9,7 @@
 import UIKit
 protocol ScheduleEditorViewControllerDelegate:class{
     func scheduleEditorViewControllerDidCancel(ScheduleEditorViewController:ScheduleEditorViewController)
-    func scheduleEditorViewController(ScheduleEditorViewController:ScheduleEditorViewController, didFinishAddingSchedule schedule:Schedule)
+    /*func scheduleEditorViewController(ScheduleEditorViewController:ScheduleEditorViewController, didFinishAddingSchedule schedule:Schedule)*/
     func scheduleEditorViewController(ScheduleEditorViewController:ScheduleEditorViewController, didFinishEditingSchedule schedule: Schedule)
 }
 
@@ -62,10 +62,6 @@ class ScheduleEditorViewController: UITableViewController, UITextFieldDelegate {
         if let schedule = scheduleToEdit {
             schedule.name = textField.text
             delegate?.scheduleEditorViewController(self, didFinishEditingSchedule: schedule)
-        } else {
-            let schedule = Schedule()
-            schedule.name = textField.text
-            delegate?.scheduleEditorViewController(self, didFinishAddingSchedule: schedule)
         }
         
     }

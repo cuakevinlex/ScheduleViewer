@@ -134,6 +134,7 @@ class ScheduleViewController: UITableViewController, ScheduleEditorViewControlle
     func configureTimeForCell(cell: UITableViewCell, withTime schedule:Schedule) {
         let label = cell.viewWithTag(1001) as UILabel
         label.text = schedule.time
+        saveSchedules()
     }
     
     
@@ -301,7 +302,7 @@ class ScheduleViewController: UITableViewController, ScheduleEditorViewControlle
             }
         }
         
-        
+        saveSchedules()
     }
 
 

@@ -16,6 +16,13 @@ protocol ScheduleEditorViewControllerDelegate:class{
 
 class ScheduleEditorViewController: UITableViewController, UITextFieldDelegate {
     weak var delegate:ScheduleEditorViewControllerDelegate?
+    
+    @IBOutlet weak var doneBarButton: UIBarButtonItem!
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    var scheduleToEdit: Schedule?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,11 +39,11 @@ class ScheduleEditorViewController: UITableViewController, UITextFieldDelegate {
         
     }
     
-    @IBOutlet weak var doneBarButton: UIBarButtonItem!
-    
-    @IBOutlet weak var textField: UITextField!
-    
-    var scheduleToEdit: Schedule?
+    override func viewDidAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        textField.becomeFirstResponder()
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

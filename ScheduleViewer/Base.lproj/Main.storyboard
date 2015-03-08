@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bAa-ra-82x">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -28,6 +28,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="f9r-6r-9It" kind="presentation" identifier="EditStudent" trigger="accessoryAction" id="jdA-HZ-4WZ"/>
+                                    <segue destination="m1V-ZU-rzK" kind="presentation" id="RSg-9g-0BM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -161,7 +162,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l49-mR-HBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1391" y="-28"/>
+            <point key="canvasLocation" x="1371" y="-112"/>
         </scene>
         <!--Tuesday-->
         <scene sceneID="SZe-9K-B5p">

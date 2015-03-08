@@ -10,15 +10,19 @@
 	<string>ScheduleViewer</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>E82BE49C36B05DDE06D7269B996B6107CB0D3CCA</key>
+		<string>https://github.com/cuakevinlex/gg.git</string>
 		<key>EE7BA10D32C2304CC0AD249A3A9EE8F541ED9391</key>
 		<string>https://github.com/cuakevinlex/ScheduleViewer</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ScheduleViewer/ScheduleViewer.xcodeproj</string>
+	<string>ScheduleViewer.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>EE7BA10D32C2304CC0AD249A3A9EE8F541ED9391</key>
+		<key>E82BE49C36B05DDE06D7269B996B6107CB0D3CCA</key>
 		<string>../../..</string>
+		<key>EE7BA10D32C2304CC0AD249A3A9EE8F541ED9391</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/cuakevinlex/ScheduleViewer</string>
@@ -28,6 +32,14 @@
 	<string>EE7BA10D32C2304CC0AD249A3A9EE8F541ED9391</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E82BE49C36B05DDE06D7269B996B6107CB0D3CCA</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

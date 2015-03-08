@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>02D86463-DD2E-462F-920F-4ECF3148B988</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ScheduleViewer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EE7BA10D32C2304CC0AD249A3A9EE8F541ED9391</key>
+		<string>https://github.com/cuakevinlex/ScheduleViewer</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ScheduleViewer/ScheduleViewer.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EE7BA10D32C2304CC0AD249A3A9EE8F541ED9391</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cuakevinlex/ScheduleViewer</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EE7BA10D32C2304CC0AD249A3A9EE8F541ED9391</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EE7BA10D32C2304CC0AD249A3A9EE8F541ED9391</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ScheduleViewer</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -154,15 +154,28 @@ class StudentListViewController: UITableViewController, StudentEditorViewControl
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        let navigationController = segue.destinationViewController as UINavigationController
-        let controller = navigationController.topViewController as StudentEditorViewController
-        controller.delegate = self
         
         if segue.identifier == "EditStudent" {
+            let navigationController = segue.destinationViewController as UINavigationController
+            let controller = navigationController.topViewController as StudentEditorViewController
+            controller.delegate = self
             if let indexPath = tableView.indexPathForCell(sender as UITableViewCell) {
                 controller.studentToEdit = students[indexPath.row]
             }
         }
+        else if segue.identifier == "AddStudent"{
+            let navigationController = segue.destinationViewController as UINavigationController
+            let controller = navigationController.topViewController as StudentEditorViewController
+            controller.delegate = self
+        }
+        else if segue.identifier == "CheckSchedule"{
+            var myTabBarController:CustomTabBarController = segue.destinationViewController as CustomTabBarController
+            if let indexPath = tableView.indexPathForCell(sender as UITableViewCell) {
+                myTabBarController.student = students[indexPath.row]
+            }
+        }
+        
+        
     }
 }
 

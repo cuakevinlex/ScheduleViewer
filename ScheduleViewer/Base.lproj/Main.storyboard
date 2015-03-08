@@ -28,7 +28,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="f9r-6r-9It" kind="presentation" identifier="EditStudent" trigger="accessoryAction" id="jdA-HZ-4WZ"/>
-                                    <segue destination="m1V-ZU-rzK" kind="presentation" id="RSg-9g-0BM"/>
+                                    <segue destination="m1V-ZU-rzK" kind="show" identifier="CheckSchedule" id="0zo-hj-UTC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -41,7 +41,7 @@
                     <navigationItem key="navigationItem" title="Students" id="yTb-VK-2JY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RBK-n4-JCe">
                             <connections>
-                                <segue destination="f9r-6r-9It" kind="presentation" id="RLD-2R-gCQ"/>
+                                <segue destination="f9r-6r-9It" kind="presentation" identifier="AddStudent" id="RLD-2R-gCQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="1383" y="1168"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="N9s-0x-WyZ">
             <objects>
-                <tabBarController id="m1V-ZU-rzK" sceneMemberID="viewController">
+                <tabBarController id="m1V-ZU-rzK" customClass="CustomTabBarController" customModule="ScheduleViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="P2v-jh-AFC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -162,7 +162,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l49-mR-HBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1371" y="-112"/>
+            <point key="canvasLocation" x="183" y="-112"/>
         </scene>
         <!--Tuesday-->
         <scene sceneID="SZe-9K-B5p">
@@ -453,7 +453,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="RLD-2R-gCQ"/>
         <segue reference="vAl-cu-cHZ"/>
-        <segue reference="jdA-HZ-4WZ"/>
     </inferredMetricsTieBreakers>
 </document>

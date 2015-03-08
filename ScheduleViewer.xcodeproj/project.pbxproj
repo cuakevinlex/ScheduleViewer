@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BE7B4131AAC2EAA00DD2825 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE7B4121AAC2EAA00DD2825 /* CustomTabBarController.swift */; };
 		1D36EFAC1AA61A5E00390A84 /* ScheduleEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D36EFAB1AA61A5E00390A84 /* ScheduleEditorViewController.swift */; };
 		1D36EFAE1AA622F000390A84 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D36EFAD1AA622F000390A84 /* Schedule.swift */; };
 		1DC416071AA483C100A524F2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC416061AA483C100A524F2 /* Student.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BE7B4121AAC2EAA00DD2825 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		1D36EFAB1AA61A5E00390A84 /* ScheduleEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleEditorViewController.swift; sourceTree = "<group>"; };
 		1D36EFAD1AA622F000390A84 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		1DC416061AA483C100A524F2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				B3634CD21A9E07C400D35A79 /* AppDelegate.swift */,
 				B3634CD41A9E07C500D35A79 /* ViewController.swift */,
 				B3634CD61A9E07C500D35A79 /* Main.storyboard */,
+				0BE7B4121AAC2EAA00DD2825 /* CustomTabBarController.swift */,
 				1D36EFAB1AA61A5E00390A84 /* ScheduleEditorViewController.swift */,
 				1DC416101AA492A600A524F2 /* ScheduleViewController.swift */,
 				1DC4160C1AA4871700A524F2 /* StudentListViewController.swift */,
@@ -238,6 +241,7 @@
 				B3634CD31A9E07C400D35A79 /* AppDelegate.swift in Sources */,
 				1D36EFAE1AA622F000390A84 /* Schedule.swift in Sources */,
 				1DC4160F1AA4876300A524F2 /* StudentEditorViewController.swift in Sources */,
+				0BE7B4131AAC2EAA00DD2825 /* CustomTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

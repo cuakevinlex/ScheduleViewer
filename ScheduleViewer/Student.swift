@@ -34,6 +34,7 @@ class Student : NSObject, NSCoding {
     
     required init(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObjectForKey("Name") as String
+        id = aDecoder.decodeObjectForKey("ID") as String
         monday = aDecoder.decodeObjectForKey("Monday") as [Schedule]
         tuesday = aDecoder.decodeObjectForKey("Tuesday") as [Schedule]
         wednesday = aDecoder.decodeObjectForKey("Wednesday") as [Schedule]

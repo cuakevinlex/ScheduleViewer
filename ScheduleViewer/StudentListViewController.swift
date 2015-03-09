@@ -64,18 +64,6 @@ class StudentListViewController: UITableViewController, StudentEditorViewControl
     }
     
     
-    @IBAction func add(sender: AnyObject) {
-        let newRowIndex = self.students.count
-        
-        let student = Student()
-        student.name = "I am gay."
-        self.students.append(student)
-        
-        let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
-        let indexPaths = [indexPath]
-        
-        self.tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-    }
     
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

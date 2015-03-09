@@ -37,22 +37,22 @@ class ScheduleEditorViewController: UITableViewController, UITextFieldDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         if let item = mondayToEdit {
-            title = "Edit Schedule"
+            title = "Monday"
             textField.text = item.name
         }else if let item = tuesdayToEdit {
-            title = "Edit Schedule"
+            title = "Tuesday"
             textField.text = item.name
         }else if let item = wednesdayToEdit {
-            title = "Edit Schedule"
+            title = "Wednesday"
             textField.text = item.name
         }else if let item = thursdayToEdit {
-            title = "Edit Schedule"
+            title = "Thursday"
             textField.text = item.name
         }else if let item = fridayToEdit {
-            title = "Edit Schedule"
+            title = "Friday"
             textField.text = item.name
         }else if let item = saturdayToEdit {
-            title = "Edit Schedule"
+            title = "Saturday"
             textField.text = item.name
         }
         
@@ -85,7 +85,7 @@ class ScheduleEditorViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func done(sender: AnyObject) {
-        if let schedule = mondayToEdit {
+        if let schedule = mondayToEdit{
             schedule.name = textField.text
             delegate?.scheduleEditorViewController(self, didFinishEditingSchedule: schedule)
         }else if let schedule = tuesdayToEdit {

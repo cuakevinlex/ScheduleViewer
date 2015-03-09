@@ -65,6 +65,7 @@ class StudentEditorViewController: UITableViewController, UITextFieldDelegate {
             delegate?.studentEditorViewController(self, didFinishEditingStudent: student)
         } else {
             let student = Student()
+            student.id = textField.text
             student.name = textField.text
             delegate?.studentEditorViewController(self, didFinishAddingStudent: student)
         }

@@ -10,18 +10,37 @@ import Foundation
 
 class Student : NSObject, NSCoding {
     var name = ""
-    var schedule = [Schedule]()
+    var id = ""
+    var monday = [Schedule]()
+    var tuesday = [Schedule]()
+    var wednesday = [Schedule]()
+    var thursday = [Schedule]()
+    var friday = [Schedule]()
+    var saturday = [Schedule]()
 //    var checked = false
     
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(name, forKey: "Name")
-        aCoder.encodeObject(schedule, forKey: "Schedule")
+         aCoder.encodeObject(id, forKey: "ID")
+        aCoder.encodeObject(monday, forKey: "Monday")
+        aCoder.encodeObject(tuesday, forKey: "Tuesday")
+        aCoder.encodeObject(wednesday, forKey: "Wednesday")
+        aCoder.encodeObject(thursday, forKey: "Thursday")
+        aCoder.encodeObject(friday, forKey: "Friday")
+        aCoder.encodeObject(saturday, forKey: "Saturday")
+        //aCoder.encodeObject(schedule, forKey: "Schedule")
 //        aCoder.encodeBool(checked, forKey: "Checked")
     }
     
     required init(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObjectForKey("Name") as String
-        schedule = aDecoder.decodeObjectForKey("Schedule") as [Schedule]
+        monday = aDecoder.decodeObjectForKey("Monday") as [Schedule]
+        tuesday = aDecoder.decodeObjectForKey("Tuesday") as [Schedule]
+        wednesday = aDecoder.decodeObjectForKey("Wednesday") as [Schedule]
+        thursday = aDecoder.decodeObjectForKey("Thursday") as [Schedule]
+        friday = aDecoder.decodeObjectForKey("Friday") as [Schedule]
+        saturday = aDecoder.decodeObjectForKey("Saturday") as [Schedule]
+        //schedule = aDecoder.decodeObjectForKey("Schedule") as [Schedule]
 //        checked =  aDecoder.decodeBoolForKey("Checked")
         super.init()
     }

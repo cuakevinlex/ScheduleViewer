@@ -21,8 +21,12 @@ class ScheduleEditorViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     
-    var scheduleToEdit: Schedule?
-    
+     var mondayToEdit: Schedule?
+     var tuesdayToEdit: Schedule?
+     var wednesdayToEdit: Schedule?
+     var thursdayToEdit: Schedule?
+     var fridayToEdit: Schedule?
+     var saturdayToEdit: Schedule?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +36,22 @@ class ScheduleEditorViewController: UITableViewController, UITextFieldDelegate {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        if let item = scheduleToEdit {
+        if let item = mondayToEdit {
+            title = "Edit Schedule"
+            textField.text = item.name
+        }else if let item = tuesdayToEdit {
+            title = "Edit Schedule"
+            textField.text = item.name
+        }else if let item = wednesdayToEdit {
+            title = "Edit Schedule"
+            textField.text = item.name
+        }else if let item = thursdayToEdit {
+            title = "Edit Schedule"
+            textField.text = item.name
+        }else if let item = fridayToEdit {
+            title = "Edit Schedule"
+            textField.text = item.name
+        }else if let item = saturdayToEdit {
             title = "Edit Schedule"
             textField.text = item.name
         }
@@ -66,7 +85,22 @@ class ScheduleEditorViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func done(sender: AnyObject) {
-        if let schedule = scheduleToEdit {
+        if let schedule = mondayToEdit {
+            schedule.name = textField.text
+            delegate?.scheduleEditorViewController(self, didFinishEditingSchedule: schedule)
+        }else if let schedule = tuesdayToEdit {
+            schedule.name = textField.text
+            delegate?.scheduleEditorViewController(self, didFinishEditingSchedule: schedule)
+        }else if let schedule = wednesdayToEdit {
+            schedule.name = textField.text
+            delegate?.scheduleEditorViewController(self, didFinishEditingSchedule: schedule)
+        }else if let schedule = thursdayToEdit {
+            schedule.name = textField.text
+            delegate?.scheduleEditorViewController(self, didFinishEditingSchedule: schedule)
+        }else if let schedule = fridayToEdit {
+            schedule.name = textField.text
+            delegate?.scheduleEditorViewController(self, didFinishEditingSchedule: schedule)
+        }else if let schedule = saturdayToEdit {
             schedule.name = textField.text
             delegate?.scheduleEditorViewController(self, didFinishEditingSchedule: schedule)
         }

@@ -17,6 +17,7 @@ class Student : NSObject, NSCoding {
     var thursday = [Schedule]()
     var friday = [Schedule]()
     var saturday = [Schedule]()
+    var user:Int = 0
 //    var checked = false
     
     func encodeWithCoder(aCoder: NSCoder) {
@@ -28,6 +29,7 @@ class Student : NSObject, NSCoding {
         aCoder.encodeObject(thursday, forKey: "Thursday")
         aCoder.encodeObject(friday, forKey: "Friday")
         aCoder.encodeObject(saturday, forKey: "Saturday")
+        aCoder.encodeObject(user, forKey: "User")
         //aCoder.encodeObject(schedule, forKey: "Schedule")
 //        aCoder.encodeBool(checked, forKey: "Checked")
     }
@@ -41,6 +43,7 @@ class Student : NSObject, NSCoding {
         thursday = aDecoder.decodeObjectForKey("Thursday") as [Schedule]
         friday = aDecoder.decodeObjectForKey("Friday") as [Schedule]
         saturday = aDecoder.decodeObjectForKey("Saturday") as [Schedule]
+        user = aDecoder.decodeObjectForKey("User") as Int
         //schedule = aDecoder.decodeObjectForKey("Schedule") as [Schedule]
 //        checked =  aDecoder.decodeBoolForKey("Checked")
         super.init()

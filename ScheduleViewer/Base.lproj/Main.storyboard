@@ -19,7 +19,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vY-Si-Kvr">
-                                            <rect key="frame" x="48" y="11" width="111" height="21"/>
+                                            <rect key="frame" x="48" y="12" width="485" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="U" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld4-yN-h0X">
+                                            <rect key="frame" x="8" y="11" width="13" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -48,7 +54,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="raY-K7-zKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-857" y="-112"/>
+            <point key="canvasLocation" x="-857" y="-113"/>
         </scene>
         <!--Add Schedule Owner-->
         <scene sceneID="q8b-ip-opn">
@@ -82,6 +88,7 @@
                             <outlet property="delegate" destination="fCb-rH-BBF" id="xAs-k2-j4N"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add Schedule Owner" id="6ZO-F9-Tro">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Lgu-ax-1d8">
                             <connections>
@@ -94,6 +101,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="doneBarButton" destination="yXq-ec-ZPS" id="72T-L1-cuP"/>
                         <outlet property="textField" destination="qOt-On-aRB" id="MEc-C3-Buk"/>
@@ -112,6 +120,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="kxS-2g-hTh">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="User" id="Agy-Wj-6mf">
+                                    <connections>
+                                        <action selector="User:" destination="Ycs-L7-I2Q" id="qIs-Gp-1sf"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Schedule" id="dgu-8M-TBj">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -180,6 +199,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Li5-sL-apc">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="User" id="Mj7-sd-Bw0">
+                                    <connections>
+                                        <action selector="User:" destination="HR4-l4-WBl" id="ff6-Xt-UEb"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Schedule" id="6MC-fm-v2M">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -226,6 +256,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="B1U-BJ-4kE">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="User" id="OAD-W6-dhP">
+                                    <connections>
+                                        <action selector="User:" destination="lJc-8n-n4u" id="7Gh-xA-eNa"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Schedule" id="sqJ-af-L40">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -329,6 +370,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="kIo-GF-g4S">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="User" id="IaT-w4-zS0">
+                                    <connections>
+                                        <action selector="User:" destination="YiJ-cS-RDx" id="91T-HU-sLb"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Schedule" id="KZl-WS-WIh">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -374,6 +426,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="iUa-wW-ILf">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="User" id="ieI-Kh-KsF">
+                                    <connections>
+                                        <action selector="User:" destination="yCm-fN-1cu" id="imE-0U-ckm"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Schedule" id="G0m-Nt-MlN">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -424,6 +487,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3Et-Fr-ckK">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="User" id="LTA-Ps-zZ2">
+                                    <connections>
+                                        <action selector="User:" destination="EqN-ug-u4L" id="gmv-Jj-LTn"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Schedule" id="LhF-0f-Ifi">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -455,6 +529,8 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Monday" id="29R-7y-egh"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eC4-G9-p9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,7 +592,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RLD-2R-gCQ"/>
-        <segue reference="vAl-cu-cHZ"/>
+        <segue reference="jdA-HZ-4WZ"/>
+        <segue reference="wCY-BG-TaT"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -87,8 +87,26 @@ class ScheduleViewController: UITableViewController, ScheduleEditorViewControlle
         if saturday1.count == 2{
             saturday =  saturday1
         }
-        
-
+        /*
+        let date:NSDate = NSDate()
+        let formatter:NSDateFormatter = NSDateFormatter()
+        formatter.dateFormat = "EEEE"
+        let dayOfWeekString = formatter.stringFromDate(date)
+        println(dayOfWeekString)
+        if dayOfWeekString == "Monday"{
+            myTabController.selectedIndex = 0
+        } else if dayOfWeekString == "Tuesday"{
+            myTabController.selectedIndex = 1
+        } else if dayOfWeekString == "Wednesday"{
+            myTabController.selectedIndex = 2
+        } else if dayOfWeekString == "Thursday"{
+            myTabController.selectedIndex = 3
+        } else if dayOfWeekString == "Friday"{
+            myTabController.selectedIndex = 4
+        } else if dayOfWeekString == "Saturday"{
+            myTabController.selectedIndex = 5
+        }
+        */
         // Do any additional setup after loading the view, typically from a nib.
       
         println("Documents folder is \(documentsDirectory())")
@@ -97,6 +115,21 @@ class ScheduleViewController: UITableViewController, ScheduleEditorViewControlle
 
     }
     
+    @IBAction func User(sender: AnyObject) {
+        var myTabController = self.tabBarController as CustomTabBarController
+        self.student = myTabController.student!
+        for (index, element) in enumerate(myTabController.students!){
+          myTabController.students![index].user = 0
+            print(myTabController.students![index].user)
+        }
+        println(student.user)
+        student.user = 1
+        
+        var message = "Hi \(student.name)! You're the new user."
+        println(student.user)
+        var alert = UIAlertView(title: "Schedule", message: message, delegate: nil, cancelButtonTitle: "Okay")
+        alert.show()
+    }
     override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
         
@@ -127,9 +160,9 @@ class ScheduleViewController: UITableViewController, ScheduleEditorViewControlle
         }
         
         self.student = myTabController.student!
-        //self.schedules = student.schedule
-     
-        var message = "\(day) schedule for \(student.name)"
+                //self.schedules = student.schedule
+ 
+       //var message = "\(day) schedule for \(student.name)"
         
         //var alert = UIAlertView(title: "Schedule", message: message, delegate: nil, cancelButtonTitle: "Okay")
         

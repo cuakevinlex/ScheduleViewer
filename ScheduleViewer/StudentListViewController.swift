@@ -35,11 +35,14 @@ class StudentListViewController: UITableViewController, StudentEditorViewControl
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         println("Documents folder is \(documentsDirectory())")
         println("Data file path is \(dataFilePath())")
     }
-    
+    override func viewWillAppear(animated: Bool) {
+        super.viewDidLoad()
+        self.tableView.reloadData()
+        saveStudents()
+    }
     
     func documentsDirectory() -> String {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as [String]
@@ -74,8 +77,14 @@ class StudentListViewController: UITableViewController, StudentEditorViewControl
         let cell = tableView.dequeueReusableCellWithIdentifier("Student") as UITableViewCell
         
         let student = students[indexPath.row]
-        
+        if student.user == 1{
+            configureUserForCell(cell, withStudent: student)
+        } else {
+            configureNotForCell(cell, withStudent: student)
+        }
         configureTextForCell(cell, withStudent: student)
+        println(student.user)
+        println(student.name)
         //configureCheckmarkForCell(cell, withCheckliststudent: student)
         
         return cell
@@ -104,6 +113,14 @@ class StudentListViewController: UITableViewController, StudentEditorViewControl
     func configureTextForCell(cell: UITableViewCell, withStudent student: Student) {
         let label = cell.viewWithTag(1000) as UILabel
         label.text = student.name
+    }
+    func configureUserForCell(cell: UITableViewCell, withStudent student: Student) {
+        let label = cell.viewWithTag(999) as UILabel
+        label.text = "Us"
+    }
+    func configureNotForCell(cell: UITableViewCell, withStudent student: Student) {
+        let label = cell.viewWithTag(999) as UILabel
+        label.text = ""
     }
     
     
@@ -135,6 +152,11 @@ class StudentListViewController: UITableViewController, StudentEditorViewControl
             let indexPath = NSIndexPath(forRow: index, inSection: 0)
             if let cell = tableView.cellForRowAtIndexPath(indexPath) {
                 configureTextForCell(cell, withStudent: student)
+                if student.user == 1{
+                    configureUserForCell(cell, withStudent: student)
+                } else {
+                    configureNotForCell(cell, withStudent: student)
+                }
             }
         }
         dismissViewControllerAnimated(true, completion: nil)
@@ -160,6 +182,7 @@ class StudentListViewController: UITableViewController, StudentEditorViewControl
             var myTabBarController:CustomTabBarController = segue.destinationViewController as CustomTabBarController
             if let indexPath = tableView.indexPathForCell(sender as UITableViewCell) {
                 myTabBarController.student = students[indexPath.row]
+                myTabBarController.students = students
             }
         }
         

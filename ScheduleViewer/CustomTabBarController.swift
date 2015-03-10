@@ -11,10 +11,29 @@ import UIKit
 class CustomTabBarController: UITabBarController {
     
     var student:Student?
-    
+    var students:[Student]?
     override func viewDidLoad() {
         super.viewDidLoad()
+        let date:NSDate = NSDate()
+        let formatter:NSDateFormatter = NSDateFormatter()
+        formatter.dateFormat = "EEEE"
+        let dayOfWeekString = formatter.stringFromDate(date)
+        println(dayOfWeekString)
+        if dayOfWeekString == "Monday"{
+            self.selectedIndex = 0
+        } else if dayOfWeekString == "Tuesday"{
+            self.selectedIndex = 1
+        } else if dayOfWeekString == "Wednesday"{
+            self.selectedIndex = 2
+        } else if dayOfWeekString == "Thursday"{
+            self.selectedIndex = 3
+        } else if dayOfWeekString == "Friday"{
+            self.selectedIndex = 4
+        } else if dayOfWeekString == "Saturday"{
+            self.selectedIndex = 5
+        }
         
+       
         // Do any additional setup after loading the view.
     }
     
